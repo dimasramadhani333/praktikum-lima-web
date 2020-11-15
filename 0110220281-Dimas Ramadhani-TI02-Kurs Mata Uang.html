@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+        <script>
+            function ubah(){
+                let Nilai = Number(document.getElementById("mau").value);
+                let pilihan = document.getElementById("valas").value;
+                let dl = Number("9915");
+                let dlsg = Number("13472");
+                let rm = Number("874");
+                let yj = Number("120");
+                let eu = Number("15888");
+                let ras = Number("3592");
+                if (isNaN(Nilai)) {
+                    alert('isi form dengan angka!');
+                }else{
+                    if (pilihan == "dollar"){
+                        hasil = Nilai * dl;
+                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                    }
+                    if (pilihan == "dollarsg"){
+                        hasil = Nilai * dlsg;
+                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                    }
+                    if (pilihan == "rmal"){
+                        hasil = Nilai * rm;
+                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                    }
+                    if (pilihan == "yenj"){
+                        hasil = Nilai * yj;
+                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                    }
+                    if (pilihan == "euro"){
+                        hasil = Nilai * eu;
+                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                    }
+                    if (pilihan == "riyal"){
+                        hasil = Nilai * ras;
+                        document.getElementById("hasil").innerHTML = hasil +" Rupiah";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form id="frm1">
+            <fieldset>
+                <label>Masukan Banyak Nilai : </label>
+                <input type="text" id="mau" value="" onchange="ubah()">
+            </fieldset>
+            <fieldset>
+                <label>Valas : </label>
+                <select id="valas" onchange="ubah()">
+                    <option>--Pilih--</option>
+                    <option value="dollar" id="dollar">Dollar US</option>
+                    <option value="dollarsg" id="dollarsg">Dollar Singapore</option>
+                    <option value="rmal" id="rmal">Ringgit Malaysia</option>
+                    <option value="yenj" id="yenj">Yen Jepang</option>
+                    <option value="euro" id="euro">Euro</option>
+                    <option value="riyal" id="riyal">Riyal Arab Saudi</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <h4 id="hasil"></h4>
+            </fieldset>
+        </form>
+    </body>
+</html>

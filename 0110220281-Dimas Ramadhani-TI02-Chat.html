@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box" style="width: 100%; stroke: black;">
+    </div>
+
+    <form method="REQUEST" onsubmit="return send();">
+        <input id="inp" type="text" name="inp">
+        <button type="submit" onclick="return send();">Send Massage left</button>
+    </form>
+</body>
+<script type="text/javascript">
+    function send() {
+        let pesan = document.getElementById("inp").value;
+        document.getElementById("box").innerHTML += pesan + "<br/>";
+        document.getElementById("inp").value = "";
+        return false;
+    }
+</script>
+</html>
